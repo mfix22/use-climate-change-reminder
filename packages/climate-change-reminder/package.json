@@ -1,0 +1,22 @@
+{
+  "name": "climate-change-reminder",
+  "version": "0.0.0",
+  "main": "index.js",
+  "description": "Help fight the climate change crisis by spreading what you can do to help.",
+  "keywords": [
+    "climate",
+    "change",
+    "is",
+    "real",
+    "and",
+    "accelerating"
+  ],
+  "author": "mfix22",
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "^4.1.0",
+    "chalk": "^2.4.2",
+    "once": "^1.4.0",
+    "terminal-link": "^2.0.0"
+  }
+}
