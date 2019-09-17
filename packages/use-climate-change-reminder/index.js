@@ -22,7 +22,7 @@ function markShown() {
 }
 
 try {
-  if (isShownRecently()) return
+  // if (isShownRecently()) return
 
   if (
     ['silent', 'error'].indexOf(process.env.npm_config_loglevel) > -1 ||

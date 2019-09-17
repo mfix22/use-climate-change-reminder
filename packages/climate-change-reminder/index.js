@@ -14,23 +14,20 @@ const tragedies = [
 
 const INDENT = '\n         '
 const ideas = [
-  `${link(
-    'Consider consuming less food',
-    'https://climatechoice.co/change-how-you-eat'
-  )} with a high${INDENT}carbon footprint, like meat or dairy.`,
-  `${link(
-    'Refrain from using a fossil fuel powered vehicle',
-    'https://climatechoice.co/change-how-you-travel'
-  )},${INDENT}and switch to cycling, public transportation,${INDENT}or walking.`,
-  `If you are able to, ${link(
-    'make the switch to a renewable energy supplier',
-    'https://climatechoice.co/choose-renewable-energy'
-  )},${INDENT}or have solar panels installed yourself.`,
-  `${link(
-    'Try turning off your heating',
-    'https://climatechoice.co/use-less-energy'
-  )}, appliances, hot water,${INDENT}or other devices that are not in use.`
+  `[Consider consuming less food with a high](https://climatechoice.co/change-how-you-eat)\ncarbon footprint, like meat or dairy.`,
+  `[Refrain from using a fossil fuel powered vehicle](https://climatechoice.co/change-how-you-travel),\nand switch to cycling, public transportation,\nor walking.``If you are able to, [make the switch to a renewable energy supplier](https://climatechoice.co/choose-renewable-energy),\nor have solar panels installed yourself.`,
+  `[Try turning off your heating](https://climatechoice.co/use-less-energy), appliances, hot water,\nor other devices that are not in use.`,
+  `[Ditch single use plastics](https://climatechoice.co/change-your-lifestyle), like coffee cups.\nBring your own from home!`,
+  `[Vote for those who prioritize the planet](https://climatechoice.co/change-your-lifestyle)`
 ]
+  .map(s => {
+    const matches = /\[(.+)\]\((.+)\)/g.exec(s)
+    if (matches) {
+      return s.replace(matches[0], link(matches[1], matches[2]))
+    }
+    return s
+  })
+  .map(s => s.replace(/(?:\r\n|\r|\n)/g, INDENT))
 
 function shuffle(arr) {
   let array = arr.slice()
