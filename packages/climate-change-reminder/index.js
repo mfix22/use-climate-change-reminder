@@ -1,6 +1,18 @@
 const boxen = require('boxen')
 const chalk = require('chalk')
 const link = require('terminal-link')
+const r = require('rexrex')
+
+const linkPattern = r.and(
+  '\\[',
+  r.capture(r.extra(r.matchers.ANY)),
+  '\\]',
+  '\\(',
+  r.capture(r.extra(r.matchers.ANY)),
+  '\\)'
+)
+
+const newLinePattern = r.group(r.or(r.and('\\r', '\\n'), '\\r', '\\n'))
 
 const tragedies = [
   'extreme weather',
@@ -15,19 +27,20 @@ const tragedies = [
 const INDENT = '\n         '
 const ideas = [
   `[Consider consuming less food with a high](https://climatechoice.co/change-how-you-eat)\ncarbon footprint, like meat or dairy.`,
-  `[Refrain from using a fossil fuel powered vehicle](https://climatechoice.co/change-how-you-travel),\nand switch to cycling, public transportation,\nor walking.``If you are able to, [make the switch to a renewable energy supplier](https://climatechoice.co/choose-renewable-energy),\nor have solar panels installed yourself.`,
+  `[Refrain from using a fossil fuel powered vehicle](https://climatechoice.co/change-how-you-travel),\nand switch to cycling, public transportation,\nor walking.`,
+  `If you are able to, [make the switch to a renewable energy supplier](https://climatechoice.co/choose-renewable-energy),\nor have solar panels installed yourself.`,
   `[Try turning off your heating](https://climatechoice.co/use-less-energy), appliances, hot water,\nor other devices that are not in use.`,
   `[Ditch single use plastics](https://climatechoice.co/change-your-lifestyle), like coffee cups.\nBring your own from home!`,
   `[Vote for those who prioritize the planet](https://climatechoice.co/change-your-lifestyle)`
 ]
   .map(s => {
-    const matches = /\[(.+)\]\((.+)\)/g.exec(s)
+    const matches = r.regex(linkPattern).exec(s)
     if (matches) {
       return s.replace(matches[0], link(matches[1], matches[2]))
     }
     return s
   })
-  .map(s => s.replace(/(?:\r\n|\r|\n)/g, INDENT))
+  .map(s => s.replace(r.regex(newLinePattern, 'g'), INDENT))
 
 function shuffle(arr) {
   let array = arr.slice()

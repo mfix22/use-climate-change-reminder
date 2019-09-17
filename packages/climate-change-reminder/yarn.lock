@@ -115,6 +115,11 @@ once@^1.4.0:
   dependencies:
     wrappy "1"
 
+rexrex@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/rexrex/-/rexrex-1.3.0.tgz#430b3574c784300512cb9a123f4ac8284ca4aba6"
+  integrity sha512-qDrL9XaErX2+bzxdysIeDcJsH4dD8KVhj8cwPjruKpnrK5TVA5nJHk4nWZTh+yInX/kZwv19ea/6qINiyZPrFg==
+
 string-width@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-3.1.0.tgz#22767be21b62af1081574306f69ac51b62203961"
