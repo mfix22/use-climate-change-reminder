@@ -26,13 +26,12 @@ const TRAGEDIES = [
 
 const INDENT = '\n         '
 const IDEAS = [
-  `[Vote for those who prioritize the planet](https://climatechoice.co/change-your-lifestyle)`,
-  `[Consider consuming less food with a high](https://climatechoice.co/change-how-you-eat)\ncarbon footprint, like meat or dairy.`,
-  `[Refrain from using a fossil fuel powered vehicle](https://climatechoice.co/change-how-you-travel),\nand switch to cycling, public transportation,\nor walking.`,
+  `[Vote for those who prioritize the planet](https://climatechoice.co/change-your-lifestyle).`,
+  `[Encourage your government officials to take action](https://climatechoice.co/change-your-lifestyle)\nagainst climate change.`,
+  `[Refrain from using a fossil fuel powered vehicle](https://climatechoice.co/change-how-you-travel),\nand switch to electric vehicles, cycling,\npublic transportation, or walking.`,
   `If you are able to, [make the switch to a renewable energy supplier](https://climatechoice.co/choose-renewable-energy),\nor have solar panels installed yourself.`,
   `[Try turning off your heating](https://climatechoice.co/use-less-energy), appliances, hot water,\nor other devices that are not in use.`,
-  `[Ditch single use plastics](https://climatechoice.co/change-your-lifestyle), like coffee cups.\nBring your own from home!`,
-  `[Encourage your government officials to take action](https://climatechoice.co/change-your-lifestyle)\nagainst climate change`
+  `[Ditch single use plastics](https://climatechoice.co/change-your-lifestyle), like coffee cups.\nBring your own from home!`
 ]
   .map(s => {
     const matches = r.regex(linkPattern).exec(s)
@@ -65,14 +64,15 @@ function formatMessage() {
 
   const message1 = chalk.bold.keyword('orange')(t.pop())
   const message2 = chalk.bold.keyword('orange')(t.pop())
+  const message3 = chalk.bold.keyword('orange')(t.pop())
 
   const site = link(chalk.green('climatechoice.co'), 'https://climatechoice.co/')
 
   const message = `
 ${chalk.cyan('Climate change')} is ${chalk.bold('real')} and ${chalk.bold('accelerating')}.
 
-We must cut global emissions in half by 2030 
-or face: ${message1}, ${message2}, and more
+We must cut global emissions in half by 2030 or face:
+${message1}, ${message2}, ${message3}, and more
 
 
 Visit ${site} and find out what you can do to help.
