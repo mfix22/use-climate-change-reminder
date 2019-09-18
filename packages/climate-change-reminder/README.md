@@ -1,8 +1,15 @@
 <h1 align="center">🌍🌏 <code>climate-change-reminder</code> 🌎🌍</h1>
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+<br>
+
+<img width="100%" src="assets/ss-0.png" alt="Screenshot of terminal output" />
+
+<br>
+<br>
 
 > Help fight the climate change crisis by spreading the message for how you can help.
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Usage
 
