@@ -26,12 +26,13 @@ const TRAGEDIES = [
 
 const INDENT = '\n         '
 const IDEAS = [
+  `[Vote for those who prioritize the planet](https://climatechoice.co/change-your-lifestyle)`,
   `[Consider consuming less food with a high](https://climatechoice.co/change-how-you-eat)\ncarbon footprint, like meat or dairy.`,
   `[Refrain from using a fossil fuel powered vehicle](https://climatechoice.co/change-how-you-travel),\nand switch to cycling, public transportation,\nor walking.`,
   `If you are able to, [make the switch to a renewable energy supplier](https://climatechoice.co/choose-renewable-energy),\nor have solar panels installed yourself.`,
   `[Try turning off your heating](https://climatechoice.co/use-less-energy), appliances, hot water,\nor other devices that are not in use.`,
   `[Ditch single use plastics](https://climatechoice.co/change-your-lifestyle), like coffee cups.\nBring your own from home!`,
-  `[Vote for those who prioritize the planet](https://climatechoice.co/change-your-lifestyle)`
+  `[Encourage your government officials to take action](https://climatechoice.co/change-your-lifestyle)\nagainst climate change`
 ]
   .map(s => {
     const matches = r.regex(linkPattern).exec(s)
