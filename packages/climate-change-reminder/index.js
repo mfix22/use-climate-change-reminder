@@ -14,7 +14,7 @@ const linkPattern = r.and(
 
 const newLinePattern = r.group(r.or(r.and('\\r', '\\n'), '\\r', '\\n'))
 
-const tragedies = [
+const TRAGEDIES = [
   'extreme weather',
   'mass extinctions',
   'water shortages',
@@ -25,7 +25,7 @@ const tragedies = [
 ]
 
 const INDENT = '\n         '
-const ideas = [
+const IDEAS = [
   `[Consider consuming less food with a high](https://climatechoice.co/change-how-you-eat)\ncarbon footprint, like meat or dairy.`,
   `[Refrain from using a fossil fuel powered vehicle](https://climatechoice.co/change-how-you-travel),\nand switch to cycling, public transportation,\nor walking.`,
   `If you are able to, [make the switch to a renewable energy supplier](https://climatechoice.co/choose-renewable-energy),\nor have solar panels installed yourself.`,
@@ -59,11 +59,11 @@ function shuffle(arr) {
 }
 
 function formatMessage() {
-  const t = shuffle(tragedies)
-  const idea = shuffle(ideas).pop()
+  const t = shuffle(TRAGEDIES)
+  const idea = shuffle(IDEAS).pop()
 
-  const x1 = chalk.bold.keyword('orange')(t.pop())
-  const x2 = chalk.bold.keyword('orange')(t.pop())
+  const message1 = chalk.bold.keyword('orange')(t.pop())
+  const message2 = chalk.bold.keyword('orange')(t.pop())
 
   const site = link(chalk.green('climatechoice.co'), 'https://climatechoice.co/')
 
@@ -71,7 +71,7 @@ function formatMessage() {
 ${chalk.cyan('Climate change')} is ${chalk.bold('real')} and ${chalk.bold('accelerating')}.
 
 We must cut global emissions in half by 2030 
-or face: ${x1}, ${x2}, and more
+or face: ${message1}, ${message2}, and more
 
 
 Visit ${site} and find out what you can do to help.

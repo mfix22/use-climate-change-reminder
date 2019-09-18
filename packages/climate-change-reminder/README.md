@@ -2,11 +2,11 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-> Help fight the climate change crisis by spreading how you can help.
+> Help fight the climate change crisis by spreading the message for how you can help.
 
 ## Usage
 
-You can either add `use-climage-change-reminder` as a dependency of your package like:
+You can either add `use-climage-change-reminder` as a dependency like:
 
 ```shell
 $ yarn add use-climage-change-reminder
@@ -18,7 +18,7 @@ or
 $ npm install --save use-climage-change-reminder
 ```
 
-to automatically print the message on install.
+to automatically print the message after installation.
 
 Otherwise you can
 import and call the function manually in your project:
