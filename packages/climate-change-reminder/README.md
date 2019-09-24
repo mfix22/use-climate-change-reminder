@@ -2,7 +2,7 @@
 
 <br>
 
-<img width="100%" src="assets/ss-0.png" alt="Screenshot of terminal output" />
+<img width="100%" src="/packages/climate-change-reminder/assets/ss-0.png" />
 
 <br>
 <br>
