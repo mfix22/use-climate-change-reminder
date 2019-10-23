@@ -18,5 +18,10 @@
   },
   "scripts": {
     "postinstall": "node index.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfix22/use-climate-change-reminder.git"
+  },
+  "homepage": "https://github.com/mfix22/use-climate-change-reminder#readme"
 }
