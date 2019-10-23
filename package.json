@@ -1,10 +1,9 @@
 {
   "private": true,
   "name": "climate-change-reminder",
-  "version": "1.3.0",
-  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "publish": "lerna publish"
   },
   "keywords": [
     "climate",
