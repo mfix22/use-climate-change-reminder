@@ -13,16 +13,16 @@
 
 ## Usage
 
-You can either add `use-climage-change-reminder` as a dependency like:
+You can either add `use-climate-change-reminder` as a dependency like:
 
 ```shell
-$ yarn add use-climage-change-reminder
+$ yarn add use-climate-change-reminder
 ```
 
 or
 
 ```shell
-$ npm install --save use-climage-change-reminder
+$ npm install --save use-climate-change-reminder
 ```
 
 to automatically print the message after installation.
