@@ -5,10 +5,10 @@ const r = require('rexrex')
 
 const linkPattern = r.and(
   '\\[',
-  r.capture(r.extra(r.matchers.ANY)),
+  r.capture(r.extra(r.matchers.ANY, true)),
   '\\]',
   '\\(',
-  r.capture(r.extra(r.matchers.ANY)),
+  r.capture(r.extra(r.matchers.ANY, true)),
   '\\)'
 )
 
@@ -28,16 +28,21 @@ const INDENT = '\n         '
 const IDEAS = [
   `[Vote for those who prioritize the planet](https://climatechoice.co/change-your-lifestyle).`,
   `[Encourage your government officials to take action](https://climatechoice.co/change-your-lifestyle)\nagainst climate change.`,
-  `[Refrain from using a fossil fuel powered vehicle](https://climatechoice.co/change-how-you-travel),\nand switch to electric vehicles, cycling,\npublic transportation, or walking.`,
   `If you are able to, [make the switch to a renewable energy supplier](https://climatechoice.co/choose-renewable-energy),\nor have solar panels installed yourself.`,
-  `[Try turning off your heating](https://climatechoice.co/use-less-energy), appliances, hot water,\nor other devices that are not in use.`,
-  `[Ditch single use plastics](https://climatechoice.co/change-your-lifestyle), like coffee cups.\nBring your own from home!`
+  `[Refrain from using a fossil fuel powered vehicle](https://climatechoice.co/change-how-you-travel),\nand switch to electric vehicles, cycling,\npublic transportation, or walking.`,
+  `Offset your carbon footprint with services\nlike [Project Wren](https://projectwren.com/) and [Offset Earth](https://offset.earth/)`
 ]
   .map(s => {
-    const matches = r.regex(linkPattern).exec(s)
+    const matches = s.match(r.regex(linkPattern, 'g'))
+
     if (matches) {
-      return s.replace(matches[0], link(matches[1], matches[2]))
+      return matches.reduce((accum, pattern) => {
+        const match = pattern.match(r.regex(linkPattern))
+
+        return accum.replace(match[0], link(match[1], match[2]))
+      }, s)
     }
+
     return s
   })
   .map(s => s.replace(r.regex(newLinePattern, 'g'), INDENT))
