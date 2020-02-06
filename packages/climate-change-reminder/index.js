@@ -30,7 +30,8 @@ const IDEAS = [
   `[Encourage your government officials to take action](https://climatechoice.co/change-your-lifestyle)\nagainst climate change.`,
   `If you are able to, [make the switch to a renewable energy supplier](https://climatechoice.co/choose-renewable-energy),\nor have solar panels installed yourself.`,
   `[Refrain from using a fossil fuel powered vehicle](https://climatechoice.co/change-how-you-travel),\nand switch to electric vehicles, cycling,\npublic transportation, or walking.`,
-  `Offset your carbon footprint with services\nlike [Project Wren](https://projectwren.com/) and [Offset Earth](https://offset.earth/)`
+  `Offset your carbon footprint with services\nlike [Project Wren](https://projectwren.com/) and [Offset Earth](https://offset.earth/).`,
+  `Join a [climate action group](https://erikareinhardt.com/personal-climate-action#climate-action-groups) in your area.`
 ]
   .map(s => {
     const matches = s.match(r.regex(linkPattern, 'g'))
