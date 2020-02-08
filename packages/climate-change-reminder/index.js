@@ -82,10 +82,10 @@ We must cut global emissions in half by 2030 or face:
 ${message1}, ${message2}, ${message3}, and more
 
 
-${chalk.yellowBright('💡 IDEA')}: ${idea}
+${chalk.yellowBright('🌳 IDEA')}: ${idea}
 `
 
-  return boxen(message, {
+  return boxen(message.trim(), {
     padding: 1,
     borderColor: 'green',
     margin: 1,
