@@ -2,7 +2,7 @@
 
 <br>
 
-<img width="100%" src="/packages/climate-change-reminder/assets/ss-0.png" />
+<img width="100%" src="/packages/climate-change-reminder/assets/ss-1.png" />
 
 <br>
 <br>
