@@ -1,6 +1,6 @@
 {
   "name": "use-climate-change-reminder",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "index.js",
   "description": "Help fight the climate change crisis by spreading the message.",
   "keywords": [
@@ -14,7 +14,7 @@
   "author": "mfix22",
   "license": "MIT",
   "dependencies": {
-    "climate-change-reminder": "^0.0.4"
+    "climate-change-reminder": "^0.0.5"
   },
   "scripts": {
     "postinstall": "node index.js"
