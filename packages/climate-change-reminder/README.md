@@ -7,11 +7,11 @@
 <br>
 <br>
 
-> Help fight the climate change crisis by spreading the message for how you can help.
+> Fight the climate crisis by spreading the message for how you can help.
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-## Usage
+## Usage 🌳
 
 You can either add `use-climate-change-reminder` as a dependency like:
 
@@ -35,3 +35,6 @@ const climateChangeReminder = require('climate-change-reminder')
 
 console.log(climateChangeReminder())
 ```
+
+## Contributing 🤝
+Pull requests are more than welcome! If you have something to add, even a question, please feel free to [open an issue](https://github.com/mfix22/use-climate-change-reminder/issues/new) or PR.
