@@ -71,15 +71,13 @@ function formatMessage() {
   const t = shuffle(TRAGEDIES)
   const idea = shuffle(IDEAS).pop()
 
-  const message1 = chalk.bold.keyword('orange')(t.pop())
-  const message2 = chalk.bold.keyword('orange')(t.pop())
-  const message3 = chalk.bold.keyword('orange')(t.pop())
+  const warnings = [t.pop(), t.pop(), t.pop()].map(w => chalk.bold.keyword('orange')(w))
 
   const message = `
 ${chalk.cyan('Climate change')} is ${chalk.bold('real')} and ${chalk.bold('accelerating')}.
 
 We must cut global emissions in half by 2030 or face:
-${message1}, ${message2}, ${message3}, and more
+${warnings.join(', ')}, and more
 
 
 ${chalk.yellowBright('🌳 IDEA')}: ${idea}
