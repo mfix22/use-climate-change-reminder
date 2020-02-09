@@ -1,6 +1,6 @@
 {
   "name": "climate-change-reminder",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "index.js",
   "description": "Help fight the climate change crisis by spreading the message.",
   "keywords": [
