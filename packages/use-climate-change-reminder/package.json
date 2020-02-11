@@ -23,5 +23,8 @@
     "type": "git",
     "url": "git+https://github.com/mfix22/use-climate-change-reminder.git"
   },
-  "homepage": "https://github.com/mfix22/use-climate-change-reminder#readme"
+  "homepage": "https://github.com/mfix22/use-climate-change-reminder#readme",
+  "bin": {
+    "use-climate-change-reminder": "./index.js"
+  }
 }
